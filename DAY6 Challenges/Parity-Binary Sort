@@ -28,7 +28,7 @@ System.out.print(x+" ");
 }
 for(int x:odd)
 {
-System.out.print(x:" ");
+System.out.print(x+" ");
 }
 t=t-1;
 }
