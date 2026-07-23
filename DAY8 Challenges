@@ -1,0 +1,32 @@
+**ZIGZAG Conversion**
+
+class Solution {
+    public String convert(String s, int num) {
+        if(num==1||num>=s.length())
+        {
+            return s;
+        }
+        String a[]=new String[num];
+        for(int i=0;i<num;i++)
+        {
+            a[i]="";
+        }
+        int cr=0;
+        boolean f=false;
+        for(char ch:s.toCharArray())
+        {
+            a[cr]+=ch;
+            if(cr==0||cr==num-1)
+            {
+                f=!f;
+            }
+            cr+=f?1:-1;
+        }
+        String r="";
+        for(String st:a)
+        {
+            r+=st;
+        }
+        return r;
+    }
+}
