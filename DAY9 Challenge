@@ -1,0 +1,7 @@
+**GCD of Odd and Even 
+
+class Solution {
+    public int gcdOfOddEvenSums(int n) {
+        return n;
+    }
+}
