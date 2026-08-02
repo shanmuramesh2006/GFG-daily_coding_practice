@@ -1,0 +1,31 @@
+Write a code to replace each element in an array by its rank in the array
+This problem asks to replace each element in an array by its rank in the array.
+The rank of an element is its position in the sorted array (with ties assigned the same rank).
+Example for array [40, 10, 20, 30]:
+After replacing each element by its rank, the array will be [4, 1, 2, 3] (after sorting, the elements are [10, 20, 30, 40], so ranks are [1, 2, 3, 4]).
+
+import java.util.*;
+class hello
+{
+  public static void main(String args[])
+  {
+    int n=4;
+    int num[]={40,20,30,10};
+    int temp[]=num.clone();
+    int rank=1;
+    HashMap<Integer,Integer> hash=new HashMap<>();
+    for(int i=0;i<n;i++)
+    {
+      if(!hash.containsKey(temp[i]))
+      {
+        hash.put(temp[i],rank);
+        rank++;
+      }
+    }
+    for(int i=0;i<n;i++)
+    {
+      arr[i]=hash.get(arr[i]);
+    }
+    System.out.print(Arrays.toString(arr[i]));
+  }
+}
