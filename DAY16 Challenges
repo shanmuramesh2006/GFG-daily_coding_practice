@@ -1,0 +1,33 @@
+*** You are given two integers n and t. Return the smallest number greater than or equal to n such that the product of its digits is divisible by t.
+Example 1:
+Input: n = 10, t = 2
+Output: 10 ***
+
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        int n=15;
+        int t=3;
+        while(true)
+        {
+            if(digit(n)%t==0)
+            {
+                System.out.print(n);
+                break;
+            }
+            n++;
+        }
+    }
+    public static int digit(int num)
+    {
+        int pro=1;
+        while(num!=0)
+        {
+            pro*=(num%10);
+            num=num/10;
+        }
+        return pro;
+    }
+}
